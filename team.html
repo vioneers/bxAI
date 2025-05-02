@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bxAI | Meet the Team</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      padding: 2rem;
+      margin: auto;
+    }
+    .member {
+      position: relative;
+      background: var(--card-bg-light);
+      border-radius: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+      padding: 1rem;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+      transition: transform 0.3s;
+      text-align: center;
+    }
+    .member:hover {
+      transform: translateY(-5px);
+    }
+    .member:nth-child(1) { animation-delay: 0.1s; }
+    .member:nth-child(2) { animation-delay: 0.2s; }
+    .member:nth-child(3) { animation-delay: 0.3s; }
+    .member:nth-child(4) { animation-delay: 0.4s; }
+    .member:nth-child(5) { animation-delay: 0.5s; }
+    .member:nth-child(6) { animation-delay: 0.6s; }
+    .member:nth-child(7) { animation-delay: 0.7s; }
+    .member:nth-child(8) { animation-delay: 0.8s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .member img {
+      width: 100%;
+      border-radius: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+    .member h3 {
+      margin: 0.2rem 0 0.1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    .member .title {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 0.5rem;
+    }
+    .bio {
+      position: absolute;
+      inset: 0;
+      background: rgba(35, 97, 146, 0.95);
+      color: white;
+      padding: 2rem 1rem 1rem;
+      font-size: 0.85rem;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: all 0.3s ease;
+      border-radius: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+    }
+    .member:hover .bio {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .bio p {
+      margin: 0.2rem 0;
+    }
+    .bio a {
+      margin-top: 0.8rem;
+      text-decoration: none;
+      font-weight: bold;
+      background: white;
+      color: var(--bxai-blue);
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a class="logo" href="index.html">bx<span>AI</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="team.html" class="active">Team</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <h2>Our Team</h2>
+  <div class="team-grid">
+    <div class="member">
+      <img src="Maria.png" alt="Maria NEAGOIE" />
+      <h3>Maria <strong>NEAGOIE</strong></h3>
+      <p class="title">President</p>
+      <div class="bio">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo ante sed eros posuere.</p>
+        <a href="https://www.linkedin.com/in/maria-neagoie-347822257/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="member">
+      <img src="Luxin.png" alt="Luxin Gabriel MATASARU" />
+      <h3>Luxin Gabriel <strong>MATASARU</strong></h3>
+      <p class="title">Vice President</p>
+      <div class="bio">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Integer ut sapien quis.</p>
+        <a href="https://www.linkedin.com/in/luxin-gabriel-matasaru-903861269/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="member">
+      <img src="Apolline.png" alt="Apolline WEINSTEIN" />
+      <h3>Apolline <strong>WEINSTEIN</strong></h3>
+      <p class="title">Communications</p>
+      <div class="bio">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non bibendum nunc, et rutrum est.</p>
+        <a href="https://www.linkedin.com/in/apolline-weinstein-268070250/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="member">
+      <img src="Keti.png" alt="Keti GOGISHVILI" />
+      <h3>Keti <strong>GOGISHVILI</strong></h3>
+      <p class="title">Treasurer</p>
+      <div class="bio">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porta eros nec mauris gravida.</p>
+        <a href="https://www.linkedin.com/in/keti-gogishvili-9688a42b6/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="member">
+      <img src="Antonio.png" alt="Antonio Mateos BELINCHÓN" />
+      <h3>Antonio <strong>MATEOS BELINCHÓN</strong></h3>
+      <p class="title">Head of Events</p>
+      <div class="bio">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum eu justo ut lacinia.</p>
+        <a href="https://www.linkedin.com/in/anmabe/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="member">
+      <img src="Tea.png" alt="Teodora SERBAN" />
+      <h3>Teodora <strong>SERBAN</strong></h3>
+      <p class="title">Events Team</p>
+      <div class="bio">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus.</p>
+        <a href="https://www.linkedin.com/in/teodora-serban-695a3b285/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="member">
+      <img src="Angel.png" alt="Àngel FABREGAT BARREDA" />
+      <h3>Àngel <strong>FABREGAT BARREDA</strong></h3>
+      <p class="title">Events Team</p>
+      <div class="bio">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, sem eget tempor bibendum.</p>
+        <a href="https://www.linkedin.com/in/%C3%A0ngel-fabregat-barreda-28a59426a/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="member">
+      <img src="Utu.png" alt="Utu KAITA" />
+      <h3>Utu <strong>KAITA</strong></h3>
+      <p class="title">Events Team</p>
+      <div class="bio">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non risus in augue fermentum.</p>
+        <a href="https://www.linkedin.com/in/utu-kaita-2872b8226/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

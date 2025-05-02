@@ -1,0 +1,131 @@
+:root {
+  --white: #ffffff;
+  --light-blue: #e6f4ff;
+  --bxai-blue: #236192;
+  --gray: #3a3a3a;
+  --transition: all 0.3s ease-in-out;
+  --card-bg-light: white;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9fb;
+  color: var(--gray);
+}
+
+/* Header / Nav */
+header {
+  background-color: var(--bxai-blue);
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #cce4f6;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  opacity: 0.7;
+}
+
+/* Optional: Hamburger support */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: var(--transition);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    background-color: var(--bxai-blue);
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-links.show {
+    max-height: 300px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Containers and Layout */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1, h2 {
+  text-align: center;
+  color: var(--bxai-blue);
+}
+
+a {
+  color: var(--bxai-blue);
+  text-decoration: underline;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Cards (e.g. for Events, Team) */
+.card, .event-card, .feature-card, .member {
+  background-color: var(--card-bg-light);
+  border-radius: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+}
+
+.card:hover, .event-card:hover, .feature-card:hover, .member:hover {
+  transform: translateY(-5px);
+}

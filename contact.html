@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>bxAI | Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="0d63bf63-f086-42c4-9ac1-851ea477b05e.png" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <style>
+    .map-container {
+      margin-top: 2rem;
+      height: 500px;
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    #map {
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <a class="logo" href="index.html">bx<span>AI</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="team.html">Team</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>📬 Contact Us</h2>
+      <p>
+        Have questions or want to get involved? We’d love to hear from you.
+      </p>
+      <p>
+        Email: <a href="mailto:contact@bxai.polytechnique.edu">contact@bxai.polytechnique.edu</a><br />
+        Follow us on Instagram & LinkedIn soon!
+      </p>
+
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script>
+    window.onload = function () {
+      const map = L.map('map', { preferCanvas: true }).setView([48.7139, 2.2085], 2);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+
+      const locations = [
+        { coords: [48.7139, 2.2085], name: "École Polytechnique" },
+        { coords: [44.4268, 26.1025], name: "Maria, Luxin & Tea" }, // Bucharest
+        { coords: [40.4168, -3.7038], name: "Antonio" }, // Madrid
+        { coords: [41.3874, 2.1686], name: "Angel" },     // Barcelona
+        { coords: [41.7151, 44.8271], name: "Keti" },     // Tbilisi
+        { coords: [40.7128, -74.0060], name: "Apolline" },
+        { coords: [60.1699, 24.9384], name: "Utu" }       // Helsinki
+      ];
+
+      locations.forEach((loc) => {
+        const marker = L.marker(loc.coords).addTo(map);
+        marker.bindPopup(`<strong>${loc.name}</strong>`);
+      });
+    }
+  </script>
+</body>
+</html>

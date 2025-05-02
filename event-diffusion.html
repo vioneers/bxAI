@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction to Diffusion | bxAI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="db9c318f-a492-4686-bd12-00e743c6a6ee.png" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .event-header {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .event-images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .event-images img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .event-images img:hover {
+      transform: scale(1.03);
+    }
+
+    .event-description {
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .lightbox-content {
+      position: relative;
+      width: 60vw;
+      max-width: 700px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lightbox img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: white;
+      text-decoration: none;
+      padding: 0 1rem;
+      z-index: 1001;
+    }
+
+    .lightbox-nav.left {
+      left: 1rem;
+    }
+
+    .lightbox-nav.right {
+      right: 1rem;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      color: #fff;
+      text-decoration: none;
+      z-index: 1002;
+    }
+
+    @media (max-width: 768px) {
+      .event-images {
+        grid-template-columns: 1fr;
+      }
+
+      .lightbox-content {
+        width: 90vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a class="logo" href="index.html">bx<span>AI</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="team.html">Team</a>
+        <a href="events.html" class="active">Events</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="event-header">
+        <h2>🚀 Introduction to Diffusion</h2>
+        <p><strong>16 April 2025</strong> — Amphi Pierre Curie</p>
+      </div>
+
+      <div class="event-description">
+        <p>
+          bxAI kicked off its first-ever technical seminar with an engaging talk on <strong>"Denoising Diffusion Probabilistic Models"</strong> led by <strong>Luxin Matasaru</strong>.
+        </p>
+        <p>
+          From foundational theory to real-world applications, attendees explored how diffusion models are powering the future of generative AI. Luxin broke down complex concepts into accessible insights, and capped it off with a live demo using Hugging Face’s <code>diffusers</code> library.
+        </p>
+        <p>
+          The event wrapped up with an essential AI tradition: a stack of pizzas. 🍕
+        </p>
+        <p><em>Thanks to everyone who joined. See you at the next wave of bxAI!</em></p>
+      </div>
+
+      <div class="event-images">
+        <a href="#img1"><img src="1745245816824.jpeg" alt="Chalkboard AI diagram" /></a>
+        <a href="#img2"><img src="1745245819464.jpeg" alt="Team presentation" /></a>
+        <a href="#img3"><img src="1745245819646.jpeg" alt="Pizza moment" /></a>
+        <a href="#img4"><img src="1745245838717.jpeg" alt="Seminar in session" /></a>
+      </div>
+
+      <!-- Lightboxes -->
+      <div id="img1" class="lightbox">
+        <a href="#img4" class="lightbox-nav left">❮</a>
+        <div class="lightbox-content"><img src="1745245816824.jpeg" /></div>
+        <a href="#img2" class="lightbox-nav right">❯</a>
+        <a href="#" class="lightbox-close">✕</a>
+      </div>
+      <div id="img2" class="lightbox">
+        <a href="#img1" class="lightbox-nav left">❮</a>
+        <div class="lightbox-content"><img src="1745245819464.jpeg" /></div>
+        <a href="#img3" class="lightbox-nav right">❯</a>
+        <a href="#" class="lightbox-close">✕</a>
+      </div>
+      <div id="img3" class="lightbox">
+        <a href="#img2" class="lightbox-nav left">❮</a>
+        <div class="lightbox-content"><img src="1745245819646.jpeg" /></div>
+        <a href="#img4" class="lightbox-nav right">❯</a>
+        <a href="#" class="lightbox-close">✕</a>
+      </div>
+      <div id="img4" class="lightbox">
+        <a href="#img3" class="lightbox-nav left">❮</a>
+        <div class="lightbox-content"><img src="1745245838717.jpeg" /></div>
+        <a href="#img1" class="lightbox-nav right">❯</a>
+        <a href="#" class="lightbox-close">✕</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
