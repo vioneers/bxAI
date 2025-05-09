@@ -6,6 +6,82 @@
   <title>bxAI | Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .section {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 2rem;
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+    }
+    .section:nth-child(2) { animation-delay: 0.3s; }
+    .section:nth-child(3) { animation-delay: 0.6s; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; transform: none; }
+      from { opacity: 0; transform: translateY(30px); }
+    }
+
+    .card {
+      background: var(--card-bg-light);
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease;
+    }
+    .card:hover { transform: translateY(-5px); }
+
+    h2.section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--bxai-blue);
+      margin-bottom: 2rem;
+    }
+
+    #team-pic{
+      width: 100%;
+      height: auto;
+    }
+
+    .team-background {
+      aspect-ratio: 16 / 5;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('1469afb4-0edf-4637-8d7e-8fb42bd37b3a.png') center/cover no-repeat;
+      background-image: url('teampic.jpg');
+      background-position: center -100px;
+      background-size: cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+      font-size: 1.7rem;
+      line-height: 1.6;
+    }
+
+    .typed-line {
+      font-family: monospace;
+      white-space: pre;
+      display: block;
+      text-align: center;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1em;
+      background: white;
+      margin-left: 2px;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -21,28 +97,78 @@
   </header>
 
   <main>
-    <h1>Welcome to bxAI</h1>
-    <div class="container">
-      <p style="text-align:center;">
-        We're a student-led initiative at École Polytechnique exploring cutting-edge AI.  
-        Join us for workshops, talks, and real-world AI projects.
-      </p>
-
-      <div class="home-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:2rem; margin-top:2rem;">
-        <div class="feature-card" style="padding:1.5rem; text-align:center;">
-          <h3>💡 Learn</h3>
-          <p>Attend workshops on machine learning, generative models, and more — no prior experience required.</p>
-        </div>
-        <div class="feature-card" style="padding:1.5rem; text-align:center;">
-          <h3>🧠 Build</h3>
-          <p>Collaborate on meaningful summer and semester-long AI projects guided by experienced mentors.</p>
-        </div>
-        <div class="feature-card" style="padding:1.5rem; text-align:center;">
-          <h3>🌍 Connect</h3>
-          <p>Meet peers, researchers, and professionals passionate about AI and data science.</p>
-        </div>
+    <section class="section">
+      <h2 class="section-title">👥 Meet the Team</h2>
+      <div class="team-background">
+        <div id="team-text"></div>
       </div>
-    </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">🔥 Latest Event</h2>
+      <div class="card" id="latest-event">
+        <p>Loading latest event...</p>
+      </div>
+    </section>
   </main>
+
+  <script>
+    const lines = [
+      "We are a close-knit group of students from all backgrounds,",
+      "driven by curiosity and creativity.",
+      "From organizing AI seminars to running hackathons,",
+      "we make things happen together."
+    ];
+
+    const container = document.getElementById("team-text");
+
+    async function typeLines(lines) {
+      for (let i = 0; i < lines.length; i++) {
+        const div = document.createElement("div");
+        div.className = "typed-line";
+        container.appendChild(div);
+        await typeLine(lines[i], div);
+      }
+    }
+
+    function typeLine(text, element) {
+      return new Promise(resolve => {
+        let i = 0;
+        const cursor = document.createElement("span");
+        cursor.className = "cursor";
+        element.appendChild(cursor);
+
+        const interval = setInterval(() => {
+          if (i < text.length) {
+            element.insertBefore(document.createTextNode(text[i]), cursor);
+            i++;
+          } else {
+            clearInterval(interval);
+            cursor.remove();
+            resolve();
+          }
+        }, 30);
+      });
+    }
+
+    typeLines(lines);
+
+    // Fetch latest event data from JSON file
+    fetch('latest-event.json')
+      .then(response => response.json())
+      .then(event => {
+        const container = document.getElementById("latest-event");
+        container.innerHTML = `
+          <h3>${event.title}</h3>
+          <p><strong>${event.date}</strong> — ${event.location}</p>
+          <p>${event.description}</p>
+          <p><a href="${event.link}">Read more →</a></p>
+        `;
+      })
+      .catch(err => {
+        document.getElementById("latest-event").innerHTML = "<p>Unable to load latest event.</p>";
+        console.error("Failed to fetch event:", err);
+      });
+  </script>
 </body>
 </html>
