@@ -1,0 +1,51 @@
+/* general rules that apply to the whole document */
+:root { /* colors need to be better figured out so that they can be reused as much asd possible */
+  --white: #ffffff;
+  --light-blue: #e6f4ff;
+  --bxai-blue: #236192;
+  --gray: #3a3a3a;
+  --transition: all 0.3s ease-in-out;
+  --background: black;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background-color: var(--background);
+    margin: 0;
+}
+
+section {
+    width: 100%;
+    height: 100dvh;
+}
+
+/* Section specific rules */
+/* Title section */
+
+.page-title {
+    color: var(--white);
+    font-size: 10rem;
+    font-weight: 400;
+    
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+
+    text-shadow: 0 0 2rem rgba(248, 250, 255, 0.4);
+}
+
+.logo-ai {
+    color: var(--light-blue);
+    text-shadow: 0 0 2rem rgba(150, 172, 223, 0.4);
+}
+
+.page-subtitle {
+    display: block;
+
+    color: var(--white);
+    font-family: "Cascadia Mono", monospace;
+    font-weight: 400;
+    font-size: 2rem;
+    
+    text-align: center;
+    text-shadow: 0 0 2rem rgba(248, 250, 255, 0.4);
+}
