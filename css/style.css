@@ -1,12 +1,11 @@
 /* general rules that apply to the whole document */
 :root { /* colors need to be better figured out so that they can be reused as much asd possible */
-  --white: #ffffff;
-  --font: white;
-  --light-blue: #e6f4ff;
-  --bxai-blue: #236192;
+  --font: rgb(246, 246, 250);
+  --light-blue: #bdd6e9;
+  --bxai-blue: #7db7e3;
   --gray: #3a3a3a;
   --transition: all 0.3s ease-in-out;
-  --background: black;
+  --background: rgb(16, 15, 15);
 }
 
 body {
