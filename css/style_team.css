@@ -1,28 +1,16 @@
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    max-width: 1200px;
-    padding: 2rem;
-    margin: auto;
+
+    margin-top: 2rem;
 }
 
 .member {
     position: relative;
-    background: var(--card-bg-light);
-    border-radius: 2rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
     padding: 1rem;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease forwards;
-    transition: transform 0.3s;
+    
     text-align: center;
-}
-
-.member:hover {
-    transform: translateY(-5px);
 }
 
 .member:nth-child(1) {
@@ -57,13 +45,6 @@
     animation-delay: 0.8s;
 }
 
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .member img {
     width: 100%;
     border-radius: 1.5rem;
@@ -78,7 +59,7 @@
 
 .member .title {
     font-size: 0.9rem;
-    color: #777;
+    color: var(--font-secondary);
     margin-bottom: 0.5rem;
 }
 
@@ -86,7 +67,6 @@
     position: absolute;
     inset: 0;
     background: rgba(35, 97, 146, 0.95);
-    color: white;
     padding: 2rem 1rem 1rem;
     font-size: 0.85rem;
     opacity: 0;
@@ -114,7 +94,7 @@
     text-decoration: none;
     font-weight: bold;
     background: white;
-    color: var(--bxai-blue);
+    color: rgb(35, 97, 146);
     padding: 0.4rem 0.8rem;
     border-radius: 999px;
 }

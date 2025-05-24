@@ -1,6 +1,4 @@
 .event-header {
-	margin-top: 2rem;
-
 	text-align: center;
 }
 
@@ -15,6 +13,9 @@
 .event-images img {
 	width: 100%;
 	height: auto;
+
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
 
 	border-radius: 1rem;
 	cursor: pointer;
@@ -41,7 +42,7 @@
 	width: 100%;
 	height: 100%;
 
-	background: rgba(0, 0, 0, 0.8);
+	background: var(--transparent-section);
 	display: none;
 	align-items: center;
 	justify-content: center;
@@ -51,7 +52,7 @@
 .lightbox-content {
 	position: relative;
 	width: 60vw;
-	max-width: 1000px;
+	max-width: 700px;
 
 	background: rgba(0, 0, 0, 0.3);
 	border: 1px solid var(--line);
