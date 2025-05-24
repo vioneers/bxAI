@@ -1,7 +1,8 @@
 /* general rules that apply to the whole document */
 :root { /* colors need to be better figured out so that they can be reused as much asd possible */
   --white: white;
-  --font: rgb(246, 246, 250);;
+  --font: rgb(246, 246, 250);
+  --font-secondary: #b0b0b0;
   --light-blue: #bdd6e9;
   --bxai-blue: #7db7e3;
   --line: #3a3a3a;
@@ -42,7 +43,7 @@ h2 {
 
 h1,
 h2 {
-    text-shadow: 0 0 2rem rgba(248, 250, 255, 0.3);
+    text-shadow: 0 0 1rem rgba(248, 250, 255, 0.3);
 }
 
 .content-container {
@@ -76,6 +77,11 @@ section.title, section.numbers {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.page-subtitle {
+    text-align: left;
+    width: 100%;
 }
 
 .logo-ai {

@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bxAI | Home</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bxAI | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=chevron_right" />
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/typing_animation.js" defer></script>
+    <script src="js/numbers_animation.js" defer></script>
 </head>
 <body>
+<div class="content-container">
     <section class="title">
         <h1 class="page-title">&ltbx<span class="logo-ai">AI</span>&gt</bxAI></h1>
-        <h2 class="page-subtitle">From organizing AI seminars to running hackathons, we make things happen together.</h2>
+        <h2 class="page-subtitle" id="typed-subtitle"></h2>
     </section>
 
-    <section class="numbers">
+    <section class="numbers" id="numbers-section">
         <div class="numbers-container">
-            <h1 id="nr_events" class="stat">3</h1>
-            <h1 id="nr_members" class="stat">142</h1>
-            <h1 id="nr_speakers" class="stat">1</h1>
+            <h1 id="nr_events" class="stat" data-target="3">0</h1>
+            <h1 id="nr_members" class="stat" data-target="142">0</h1>
+            <h1 id="nr_speakers" class="stat" data-target="1">0</h1>
         </div>
         <h2 id="countdown_event">10D:1h:15m until next event!</h2>
     </section>
@@ -28,6 +35,23 @@
     <section class="events">
         <div class="left-column">
             <a href="/event-diffusion.html" class="block left">
+                <div class="event-info-container">
+                    <h2 class="event-title">The AI Debate (bxAI x DebateX)</h2>
+                    <div class="buttons-container">
+                        <span>May 2025</span>
+                        <span>Debate</span>
+                        <span>Learn more <span class="material-symbols-outlined">chevron_right</span>
+                        </span>
+                    </div>
+                </div>
+                <img src="res/event_posters/4994823421246418403.jpg" alt="Event 1" class="event-image">
+            </a>
+        </div>
+
+        <div class="right-column"> 
+            <!-- these are just examples, 
+             events will be stored separately and added via js -->
+            <a href="/event-diffusion.html" class="block">
                 <div class="event-info-container">
                     <h2 class="event-title">Introduction to Diffusion</h2>
                     <div class="buttons-container">
@@ -37,25 +61,34 @@
                         </span>
                     </div>
                 </div>
-                <img src="res/1745245816824.jpeg" alt="Event 1" class="event-image">
+                <img src="res/event_posters/4900175592016686765.JPG" alt="Event 1" class="event-image">
             </a>
-        </div>
 
-        <div class="right">
-            <div>
-                <h2 class="event-title">Event 2</h2>
-                <img src="event1.jpg" alt="Event 1" class="event-image">
-            </div>
+            <a href="/event-diffusion.html" class="block">
+                <div class="event-info-container">
+                    <h2 class="event-title">MIT Professor Talk</h2>
+                    <div class="buttons-container">
+                        <span>May 2025</span>
+                        <span>Guest Seminar</span>
+                        <span>Learn more <span class="material-symbols-outlined">chevron_right</span>
+                        </span>
+                    </div>
+                </div>
+                <img src="res/event_posters/4967872772046958057.jpg" alt="Event 1" class="event-image">
+            </a>
 
-            <div>
-                <h2 class="event-title">Event 3</h2>
-                <img src="event1.jpg" alt="Event 1" class="event-image">
-            </div>
-
-            <div>
-                <h2 class="event-title">Event 3</h2>
-                <img src="event1.jpg" alt="Event 1" class="event-image">
-            </div>
+            <a href="/event-diffusion.html" class="block">
+                <div class="event-info-container">
+                    <h2 class="event-title">The AI Debate (bxAI x DebateX)</h2>
+                    <div class="buttons-container">
+                        <span>May 2025</span>
+                        <span>Debate</span>
+                        <span>Learn more <span class="material-symbols-outlined">chevron_right</span>
+                        </span>
+                    </div>
+                </div>
+                <img src="res/event_posters/4994823421246418403.jpg" alt="Event 1" class="event-image">
+            </a>
         </div>
     </section>
     <section class="team">
@@ -64,5 +97,6 @@
     <footer>
         <h1 class="page-title">&lt/bx<span class="logo-ai">AI</span>&gt</bxAI></h1>
     </footer>
+</div>
 </body>
 </html>
