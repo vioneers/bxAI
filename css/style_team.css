@@ -1,0 +1,120 @@
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    padding: 2rem;
+    margin: auto;
+}
+
+.member {
+    position: relative;
+    background: var(--card-bg-light);
+    border-radius: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    padding: 1rem;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+}
+
+.member:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.member:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.member:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.member:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.member:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.member:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.member:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.member:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.member img {
+    width: 100%;
+    border-radius: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.member h3 {
+    margin: 0.2rem 0 0.1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.member .title {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.bio {
+    position: absolute;
+    inset: 0;
+    background: rgba(35, 97, 146, 0.95);
+    color: white;
+    padding: 2rem 1rem 1rem;
+    font-size: 0.85rem;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.member:hover .bio {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bio p {
+    margin: 0.2rem 0;
+}
+
+.bio a {
+    margin-top: 0.8rem;
+    text-decoration: none;
+    font-weight: bold;
+    background: white;
+    color: var(--bxai-blue);
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+}
