@@ -1,3 +1,5 @@
+"use strict";
+
 window.onload = function () {
   const map = L.map('map', { preferCanvas: true }).setView([48.7139, 2.2085], 2);
 

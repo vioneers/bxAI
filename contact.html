@@ -1,61 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bxAI | Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style_old.css">
-  <link rel="stylesheet" href="css/style_contact.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>bxAI | Home</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style_old.css">
+	<link rel="stylesheet" href="css/style_contact.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
 </head>
+
 <body>
-  <header>
-    <div class="nav-container">
-      <a class="logo" href="index.html">bx<span>AI</span></a>
-      <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="team.html">Team</a>
-        <a href="events.html">Events</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <section class="section">
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
+	<header>
+		<div class="nav-container">
+			<a class="logo" href="index.html">bx<span>AI</span></a>
+			<nav class="nav-links">
+				<a href="index.html" class="active">Home</a>
+				<a href="team.html">Team</a>
+				<a href="events.html">Events</a>
+				<a href="contact.html">Contact</a>
+			</nav>
+		</div>
+	</header>
 
-      <!-- MAP SECTION -->
-      <div style="flex: 1 1 48%; min-width: 300px;">
-        <h2 class="section-title">
-          📍 Find Us
-          <a href="https://www.linkedin.com/company/bxai/posts/?feedView=all" target="_blank">
-            <img src="res/social_media_icons/linkedin-icon.png" alt="LinkedIn" style="height: 24px; vertical-align: middle; margin-left: 0.5rem;">
-          </a>
-          <a href="https://www.instagram.com/bx.a.i/" target="_blank">
-            <img src="res/social_media_icons/instagram-icon.png" alt="Instagram" style="height: 24px; vertical-align: middle; margin-left: 0.5rem;">
-          </a>
-        </h2>
-        <div class="map-container">
-          <div id="map"></div>
-        </div>
-      </div>
+	<section class="section">
 
-      <!-- CONTACT FORM SECTION -->
-      <div style="flex: 1 1 48%; min-width: 300px;">
-        <h2 class="section-title">📬 Contact Us</h2>
-        <form action="mailto:maria.neagoie@polytechnique.edu" method="POST" enctype="text/plain" style="display: flex; flex-direction: column; gap: 1rem;">
-          <input type="text" name="Name" placeholder="Your Name" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;">
-          <textarea name="Question" placeholder="Your Message" rows="5" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;"></textarea>
-          <button type="submit" style="background-color: var(--bxai-blue); color: white; padding: 0.75rem; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">Send Message</button>
-        </form>
-      </div>
+		<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
 
-    </div>
-  </section>
+			<!-- MAP SECTION -->
+			<div style="flex: 1 1 48%; min-width: 300px;">
+				<h2 class="section-title">
+					📍 Find Us
+					<a href="https://www.linkedin.com/company/bxai/posts/?feedView=all" target="_blank">
+						<img src="res/social_media_icons/linkedin-icon.png" alt="LinkedIn"
+							style="height: 24px; vertical-align: middle; margin-left: 0.5rem;">
+					</a>
+					<a href="https://www.instagram.com/bx.a.i/" target="_blank">
+						<img src="res/social_media_icons/instagram-icon.png" alt="Instagram"
+							style="height: 24px; vertical-align: middle; margin-left: 0.5rem;">
+					</a>
+				</h2>
+				<div class="map-container">
+					<div id="map"></div>
+				</div>
+			</div>
 
-  <!-- Leaflet map -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-  <script src="js/script_contact.js"></script>
+			<!-- CONTACT FORM SECTION -->
+			<div style="flex: 1 1 48%; min-width: 300px;">
+				<h2 class="section-title">📬 Contact Us</h2>
+				<form action="mailto:maria.neagoie@polytechnique.edu" method="POST" enctype="text/plain"
+					style="display: flex; flex-direction: column; gap: 1rem;">
+					<input type="text" name="Name" placeholder="Your Name" required
+						style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;">
+					<textarea name="Question" placeholder="Your Message" rows="5" required
+						style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;"></textarea>
+					<button type="submit"
+						style="background-color: var(--bxai-blue); color: white; padding: 0.75rem; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">Send
+						Message</button>
+				</form>
+			</div>
+
+		</div>
+
+	</section>
+
+	<!-- Leaflet map -->
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+	<script src="js/script_contact.js"></script>
+	
 </body>
+
 </html>
