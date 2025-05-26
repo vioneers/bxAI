@@ -1,3 +1,5 @@
+"use strict";
+
 function updateCountdown() {
   const countdownElement = document.getElementById("countdown_event");
   if (!countdownElement) return;
