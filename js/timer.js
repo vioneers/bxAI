@@ -16,8 +16,13 @@ function updateCountdown() {
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  countdownElement.innerText =
-    `Next event in: ${days} days ${hours} hours ${minutes} minutes ${seconds} seconds!`;
+  let countdownText = `Next event in: ${days} days ${hours} hours ${minutes} minutes ${seconds} seconds!`;
+
+  if (window.innerWidth < 768) {
+    countdownText = `Next event in:\n${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  countdownElement.innerText = countdownText;
 }
 
 setInterval(updateCountdown, 1000);

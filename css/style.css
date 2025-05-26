@@ -5,10 +5,21 @@
     --font-secondary: #b0b0b0;
     --light-blue: #bdd6e9;
     --bxai-blue: #bdd6e9 /*#7db7e3;*/;
-    --line: #3a3a3a;
+    --line: #3a3f48;
     --transition: all 0.3s ease-in-out;
     --background: black;
     --transparent-section: rgba(0, 0, 0, 0.5);
+
+    /* spacings for desktop */
+    --font-size: 16px;
+
+    --grid-margin: 72px;
+    --grid-gutter: 48px;
+    --spacer: 16px;
+
+    font-family: "Cascadia Mono", monospace;
+    font-size: var(--font-size, 16px);
+    color: var(--font);
 }
 
 *,
@@ -19,8 +30,6 @@
 }
 
 body {
-    font-family: "Cascadia Mono", monospace;
-    color: var(--font);
     background-color: var(--background);
     margin: 0;
 }
@@ -142,8 +151,7 @@ header {
 .event-card,
 .feature-card,
 .member {
-    background-color: var(--transparent-section);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
     border-radius: 2rem;
 	border: 1px solid var(--line);
 
@@ -176,28 +184,52 @@ header {
         position: absolute;
         top: 100%;
         right: 0;
+        
         flex-direction: column;
-        background-color: var(--bxai-blue);
         width: 100%;
         max-height: 0;
+
+        background-color: var(--transparent-section);
+        border-bottom: 1px solid var(--line);
+        
         overflow: hidden;
         transition: max-height 0.3s ease;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+        will-change: filter;
+    }
+
+    .nav-links a {
+        margin: 0.5rem 0;
+        padding: 0 1.5rem;
     }
 
     .nav-links.show {
         max-height: 300px;
     }
 
-    .hamburger {
+    .hamburger, .nav-links {
         display: flex;
     }
 }
 
-@media (min-width: 1025px) {
+@media (max-width: 768px) {
     :root {
-        --grid-margin: 72px;
-        --grid-gutter: 48px;
+
+        --font-size: 14px;
+
+        --grid-margin: 16px;
+        --grid-gutter: 16px;
+        --spacer: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    :root {
+
+        --font-size: 14px;
+
+        --grid-margin: 32px;
+        --grid-gutter: 32px;
         --spacer: 16px;
     }
 }
