@@ -2,16 +2,6 @@ html {
     background-color: #050505;
 }
 
-body {
-    margin: 0;
-    overflow-x: hidden;
-    /* Hide scrollbars if content overflows */
-    background-color: #00000000;
-    /* Light blue background like in the image */
-    font-family: 'Inter', sans-serif;
-    /* Using Inter font */
-}
-
 #grid-container {
     display: grid;
     /* grid-template-columns and rows will be set by JS to make it responsive */

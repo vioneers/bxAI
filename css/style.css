@@ -7,7 +7,7 @@
     --bxai-blue: #bdd6e9 /*#7db7e3;*/;
     --line: #3a3f48;
     --transition: all 0.3s ease-in-out;
-    --background: black;
+    --background: rgba(0, 0, 0, 0);
     --transparent-section: rgba(0, 0, 0, 0.5);
 
     /* spacings for desktop */
@@ -32,6 +32,7 @@
 body {
     background-color: var(--background);
     margin: 0;
+    overflow-x: hidden;
 }
 
 .container {

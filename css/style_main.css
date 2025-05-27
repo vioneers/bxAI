@@ -244,6 +244,10 @@ section.events {
         justify-content: space-around;
     }
 
+    #countdown_event {
+        margin: 0;
+    }
+
     .numbers-container {
         grid-template-columns: 1fr;
         gap: var(--grid-gutter);
