@@ -1,3 +1,5 @@
+"use strict";
+
 // JavaScript (script.js content)
 document.addEventListener('DOMContentLoaded', () => {
     const gridContainer = document.getElementById('grid-container');
