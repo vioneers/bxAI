@@ -14,12 +14,13 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style_main.css">
-    <link rel="stylesheet" href="css/background2.css">
+    <link rel="stylesheet" href="css/background.css">
 
     <script src="js/typing_animation.js" defer></script>
     <script src="js/numbers_animation.js" defer></script>
     <script src="js/timer.js" defer></script>
-    <script src="js/background2.js" defer></script>
+    <script src="js/diffuse_on_scroll.js" defer></script>
+    <script src="js/background.js" defer></script>
     
 </head>
 
@@ -132,14 +133,17 @@
         </div>
     </section>
 
-    <section class="team">
-        <h2>Our Team</h2>
-        <img src="teampic.jpg" alt="Team Background" class="team-background">
+    <section class="team" id="team-section">
+        <div class="image-sequence-container" id="image-sequence-container">
+            <h2>Our Team</h2>
+            <img id="sequence-image" src="https://placehold.co/800x600/a0c4ff/ffffff?text=Loading..." alt="Image Sequence Frame">
+        </div>
+
     </section>
     
-    <footer>
+    <section class="footer">
         <span class="big-text">&lt;/bx<span class="logo-ai">AI</span>&gt;</span>
-    </footer>
+    </section>
 </div>
 </body>
 </html>
