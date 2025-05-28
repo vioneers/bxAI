@@ -1,5 +1,5 @@
 /* general rules that apply to the whole document */
-section {
+section, footer {
     width: 100%;
     height: 100dvh;
 
@@ -63,7 +63,7 @@ h2 {
 /* Numbers section */
 section.title,
 section.numbers, 
-.footer {
+footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
