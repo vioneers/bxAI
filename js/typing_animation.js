@@ -1,6 +1,6 @@
 "use strict";
 
-const text = "From AI seminars to hackathons, we make things happen together!";
+const text = "From AI seminars to hackathons, we make things happen together at l'X!";
 const target = document.getElementById("typed-subtitle");
 let index = 0;
 
