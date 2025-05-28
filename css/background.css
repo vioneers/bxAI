@@ -43,7 +43,7 @@ html {
 
     10% {
         /* Start turning blue and expanding earlier */
-        background-color: #2196F3;
+        background-color: #2195f389;
         /* A vibrant blue */
         transform: scale(1.03);
         /* Slightly bigger */
@@ -55,7 +55,7 @@ html {
 
     50% {
         /* Hold peak glow for longer */
-        background-color: #2196F3;
+        background-color: #2195f389;
         transform: scale(1.03);
         box-shadow: 0 0 40px rgba(33, 150, 243, 0.1), 0 0 25px rgba(33, 150, 243, 0.1);
         border: 1px solid #2787d3;
@@ -97,7 +97,7 @@ html {
 .light-2 {
     width: 400px;
     height: 400px;
-    top: 60%;
+    top: 20%;
     left: 70%;
     animation-delay: 5s;
 }
@@ -105,8 +105,8 @@ html {
 .light-3 {
     width: 350px;
     height: 350px;
-    top: 30%;
-    left: 30%;
+    top: 25%;
+    left: 25%;
     animation-delay: 10s;
 }
 
@@ -166,7 +166,7 @@ html {
 .blob-3 {
     width: 550px;
     height: 550px;
-    top: 20%;
+    top: -20%;
     right: -10%;
     animation-delay: 20s;
 }
@@ -191,7 +191,7 @@ html {
 
 /* Subtle noise filter on top of everything */
 #noise-overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
